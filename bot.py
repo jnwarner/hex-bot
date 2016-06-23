@@ -12,7 +12,7 @@ r = lambda: random.randint(0,255)
 hex = '#%02X%02X%02X' % (r(),r(),r())
 
 webhexcolor = hex
-im = Image.new("RGB", (500,500), webhexcolor)
+im = Image.new("RGB", (128,128), webhexcolor)
 im.save("color.png")
 
 im = os.path.abspath('color.png')
