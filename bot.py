@@ -1,5 +1,6 @@
 import tweepy
 import os
+import time
 import random
 from secrets import *
 from PIL import Image
@@ -30,5 +31,6 @@ greeting = random.choice(foo)
 #update Twitter status with im, random greeting, and hex
 api.update_with_media(im, status=greeting + hex + " #ColorInspiration")
 
-#delete color.png after tweeting
+#delete color.png 5 seconds after tweeting
+time.sleep(5)
 os.remove('color.png')
